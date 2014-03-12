@@ -14,5 +14,10 @@ module FigNewton
     def default_directory
       'config/environments'
     end
+
+    def load(filename)
+      @yml = YAML.load(ERB.new(File.read("#{yml_directory}/#{filename}")).result)
+    end
+
   end
 end

@@ -10,3 +10,5 @@ first:
     fourth: bar
 
 port: 1234
+
+erb: <%= "test" * 2 %>

@@ -39,11 +39,18 @@ Feature: Functionality of the fig_newton gem
     Given I have read the default file from the default directory
     When I ask for the value for "base_url"
     Then I should see "http://cheezyworld.com"
-    
+
   Scenario:  Requesting a numerical value
     Given I have read the configuration file
     When I ask for the value for "port"
     Then I should see 1234
+
+    @focus
+  Scenario:  Requesting a erb value
+    Given I have read the configuration file
+    When I ask for the value for "erb"
+    Then I should see "testtest"
+
 
   Scenario:  Requesting data from a node can be converted to a hash
     Given I have read the configuration file
